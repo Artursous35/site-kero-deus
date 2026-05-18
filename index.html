@@ -9,15 +9,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+
     body{
       margin:0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
       background:#f5f5f5;
+      color:#333;
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     .hero{
       height:100vh;
-      background-image:url("C:/Users/1-07396/Documents/site kd/IMG_0142.jpg");
+      background-image:url("./IMG_0142.jpg");
       background-size:cover;
       background-position:center;
       display:flex;
@@ -42,24 +48,36 @@
 
     .btn{
       display:inline-block;
-      margin-top:20px;
       padding:15px 30px;
-      background:#c28b2c;
-      color:white;
-      text-decoration:none;
       border-radius:999px;
+      text-decoration:none;
       font-weight:bold;
       transition:0.3s;
+      margin:10px;
     }
 
-    .btn:hover{
+    .btn-gold{
+      background:#c28b2c;
+      color:white;
+    }
+
+    .btn-gold:hover{
       background:#dda13c;
     }
 
+    .btn-green{
+      background:#25D366;
+      color:white;
+    }
+
+    .btn-green:hover{
+      background:#1ebe5d;
+    }
+
     .section{
-      padding:80px 20px;
       max-width:1200px;
       margin:auto;
+      padding:80px 20px;
     }
 
     .grid{
@@ -76,8 +94,9 @@
     }
 
     .title{
-      font-size:42px;
+      font-size:45px;
       margin-bottom:20px;
+      font-weight:bold;
     }
 
     .gallery{
@@ -96,24 +115,29 @@
 
     .card{
       background:white;
-      padding:40px;
+      padding:50px;
       border-radius:30px;
       text-align:center;
       box-shadow:0 10px 30px rgba(0,0,0,0.1);
     }
 
     .price{
-      font-size:60px;
+      font-size:65px;
       font-weight:bold;
       color:#2f1d14;
+      margin:20px 0;
     }
 
     footer{
       background:#2f1d14;
       color:white;
       text-align:center;
-      padding:40px;
+      padding:50px 20px;
       margin-top:60px;
+    }
+
+    .wpp-buttons{
+      margin-top:30px;
     }
 
     @media(max-width:768px){
@@ -131,10 +155,15 @@
       }
 
       .price{
-        font-size:42px;
+        font-size:45px;
+      }
+
+      .hero-content h1{
+        font-size:45px !important;
       }
 
     }
+
   </style>
 </head>
 
@@ -147,15 +176,15 @@
 
     <div class="hero-content">
 
-      <h1 style="font-size:70px; margin-bottom:20px;">
+      <h1 style="font-size:75px; margin-bottom:20px; font-weight:bold;">
         KERO DEUS
       </h1>
 
-      <p style="font-size:22px;">
+      <p style="font-size:24px;">
         Garanta agora a blusa oficial do acampamento.
       </p>
 
-      <a href="#comprar" class="btn">
+      <a href="#comprar" class="btn btn-gold">
         Comprar Agora
       </a>
 
@@ -169,10 +198,14 @@
     <div class="grid">
 
       <div>
+
+        <!-- IMAGEM -->
         <img 
-          src="C:/Users/1-07396/Documents/site kd/IMG_9979.jpg"
+          src="./IMG_9979.jpg"
+          alt="Blusa Kero Deus"
           class="img"
         >
+
       </div>
 
       <div>
@@ -183,8 +216,15 @@
 
         <p style="font-size:20px; line-height:1.7; color:#555;">
           A camisa oficial do Kero Deus representa fé, união e alegria.
-          Ideal para viver todos os momentos do acampamento.
+          Ideal para viver intensamente todos os momentos do acampamento.
         </p>
+
+        <ul style="margin-top:25px; font-size:18px; line-height:2;">
+          <li>✅ Modelo Oversize</li>
+          <li>✅ Tecido confortável</li>
+          <li>✅ Estampa exclusiva</li>
+          <li>✅ Ideal para o acampamento</li>
+        </ul>
 
       </div>
 
@@ -201,17 +241,25 @@
         Viva essa experiência
       </h2>
 
+      <p style="color:#ddd;">
+        O Kero Deus é mais do que um evento.
+      </p>
+
     </div>
 
     <div class="gallery-grid">
 
+      <!-- IMAGEM -->
       <img 
-        src="C:/Users/1-07396/Documents/site kd/IMG_9938.jpg"
+        src="./IMG_9938.jpg"
+        alt="Kero Deus"
         class="img"
       >
 
+      <!-- IMAGEM -->
       <img 
-        src="C:/Users/1-07396/Documents/site kd/IMG_9845.jpg"
+        src="./IMG_9845.jpg"
+        alt="Kero Deus"
         class="img"
       >
 
@@ -228,7 +276,7 @@
         Blusa Oficial Kero Deus
       </h2>
 
-      <p style="color:#777;">
+      <p style="color:#777; font-size:18px;">
         Edição especial do acampamento
       </p>
 
@@ -236,17 +284,36 @@
         R$ 59,90
       </div>
 
-      <p style="margin-top:20px;">
-        Tamanhos disponíveis: P • M • G • GG
+      <p style="font-size:20px;">
+        Tamanhos disponíveis:
       </p>
 
-      <a 
-        href="https://wa.me/5599999999999"
-        target="_blank"
-        class="btn"
-      >
-        Comprar pelo WhatsApp
-      </a>
+      <p style="margin-top:10px; font-size:22px; font-weight:bold;">
+        P • M • G • GG
+      </p>
+
+      <!-- BOTÕES WHATSAPP -->
+      <div class="wpp-buttons">
+
+        <!-- WHATSAPP 1 -->
+        <a 
+          href="https://wa.me/5599999999999?text=Olá,%20tenho%20interesse%20na%20blusa%20do%20Kero%20Deus"
+          target="_blank"
+          class="btn btn-green"
+        >
+          Comprar com João
+        </a>
+
+        <!-- WHATSAPP 2 -->
+        <a 
+          href="https://wa.me/5588888888888?text=Olá,%20tenho%20interesse%20na%20blusa%20do%20Kero%20Deus"
+          target="_blank"
+          class="btn btn-green"
+        >
+          Comprar com Maria
+        </a>
+
+      </div>
 
     </div>
 
@@ -255,11 +322,11 @@
   <!-- FOOTER -->
   <footer>
 
-    <h2>
+    <h2 style="font-size:35px; margin-bottom:10px;">
       KERO DEUS
     </h2>
 
-    <p>
+    <p style="font-size:18px;">
       Fé • Juventude • Experiência
     </p>
 
