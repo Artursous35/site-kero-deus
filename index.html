@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kero Deus - Blusa Oficial</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f5f5f5;
+    }
+
+    .hero{
+      height:100vh;
+      background-image:url("C:/Users/1-07396/Documents/site kd/IMG_0142.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:15px 30px;
+      background:#c28b2c;
+      color:white;
+      text-decoration:none;
+      border-radius:999px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#dda13c;
+    }
+
+    .section{
+      padding:80px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .title{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .gallery{
+      background:#2f1d14;
+      color:white;
+      padding:80px 20px;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:white;
+      padding:40px;
+      border-radius:30px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .price{
+      font-size:60px;
+      font-weight:bold;
+      color:#2f1d14;
+    }
+
+    footer{
+      background:#2f1d14;
+      color:white;
+      text-align:center;
+      padding:40px;
+      margin-top:60px;
+    }
+
+    @media(max-width:768px){
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .title{
+        font-size:32px;
+      }
+
+      .price{
+        font-size:42px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1 style="font-size:70px; margin-bottom:20px;">
+        KERO DEUS
+      </h1>
+
+      <p style="font-size:22px;">
+        Garanta agora a blusa oficial do acampamento.
+      </p>
+
+      <a href="#comprar" class="btn">
+        Comprar Agora
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section">
+
+    <div class="grid">
+
+      <div>
+        <img 
+          src="C:/Users/1-07396/Documents/site kd/IMG_9979.jpg"
+          class="img"
+        >
+      </div>
+
+      <div>
+
+        <h2 class="title">
+          Muito mais que uma blusa
+        </h2>
+
+        <p style="font-size:20px; line-height:1.7; color:#555;">
+          A camisa oficial do Kero Deus representa fé, união e alegria.
+          Ideal para viver todos os momentos do acampamento.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALERIA -->
+  <section class="gallery">
+
+    <div style="text-align:center; margin-bottom:50px;">
+
+      <h2 class="title">
+        Viva essa experiência
+      </h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <img 
+        src="C:/Users/1-07396/Documents/site kd/IMG_9938.jpg"
+        class="img"
+      >
+
+      <img 
+        src="C:/Users/1-07396/Documents/site kd/IMG_9845.jpg"
+        class="img"
+      >
+
+    </div>
+
+  </section>
+
+  <!-- COMPRA -->
+  <section class="section" id="comprar">
+
+    <div class="card">
+
+      <h2 class="title">
+        Blusa Oficial Kero Deus
+      </h2>
+
+      <p style="color:#777;">
+        Edição especial do acampamento
+      </p>
+
+      <div class="price">
+        R$ 59,90
+      </div>
+
+      <p style="margin-top:20px;">
+        Tamanhos disponíveis: P • M • G • GG
+      </p>
+
+      <a 
+        href="https://wa.me/5599999999999"
+        target="_blank"
+        class="btn"
+      >
+        Comprar pelo WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h2>
+      KERO DEUS
+    </h2>
+
+    <p>
+      Fé • Juventude • Experiência
+    </p>
+
+  </footer>
+
+</body>
+</html>
