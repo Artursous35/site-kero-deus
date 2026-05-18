@@ -1,336 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kero Deus - Blusa Oficial</title>
-
+  <title>Kero Deus | Blusas e Inscrições</title>
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
-
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#f5f5f5;
-      color:#333;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    .hero{
-      height:100vh;
-      background-image:url("./IMG_0142.jpg");
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
-    }
-
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.6);
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:15px 30px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-      margin:10px;
-    }
-
-    .btn-gold{
-      background:#c28b2c;
-      color:white;
-    }
-
-    .btn-gold:hover{
-      background:#dda13c;
-    }
-
-    .btn-green{
-      background:#25D366;
-      color:white;
-    }
-
-    .btn-green:hover{
-      background:#1ebe5d;
-    }
-
-    .section{
-      max-width:1200px;
-      margin:auto;
-      padding:80px 20px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      align-items:center;
-    }
-
-    .img{
-      width:100%;
-      border-radius:25px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    .title{
-      font-size:45px;
-      margin-bottom:20px;
-      font-weight:bold;
-    }
-
-    .gallery{
-      background:#2f1d14;
-      color:white;
-      padding:80px 20px;
-    }
-
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .card{
-      background:white;
-      padding:50px;
-      border-radius:30px;
-      text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .price{
-      font-size:65px;
-      font-weight:bold;
-      color:#2f1d14;
-      margin:20px 0;
-    }
-
-    footer{
-      background:#2f1d14;
-      color:white;
-      text-align:center;
-      padding:50px 20px;
-      margin-top:60px;
-    }
-
-    .wpp-buttons{
-      margin-top:30px;
-    }
-
-    @media(max-width:768px){
-
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .gallery-grid{
-        grid-template-columns:1fr;
-      }
-
-      .title{
-        font-size:32px;
-      }
-
-      .price{
-        font-size:45px;
-      }
-
-      .hero-content h1{
-        font-size:45px !important;
-      }
-
-    }
-
+    body { font-family: 'Inter', sans-serif; }
+    #carousel img { flex-shrink: 0; width: 100%; }
+    .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
   </style>
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-      <h1 style="font-size:75px; margin-bottom:20px; font-weight:bold;">
-        KERO DEUS
-      </h1>
-
-      <p style="font-size:24px;">
-        Garanta agora a blusa oficial do acampamento.
-      </p>
-
-      <a href="#comprar" class="btn btn-gold">
-        Comprar Agora
-      </a>
-
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 glass-nav shadow-sm z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-extrabold tracking-wider text-[#2f1d14]">KERO DEUS</a>
+      <nav class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600 uppercase tracking-widest">
+        <a href="#" class="hover:text-[#c89b3c] transition">Início</a>
+        <a href="#sobre" class="hover:text-[#c89b3c] transition">A Blusa</a>
+        <a href="#experiencia" class="hover:text-[#c89b3c] transition">Experiência</a>
+        <a href="#inscricao" class="hover:text-[#c89b3c] transition">Inscrições</a>
+      </nav>
     </div>
+  </header>
 
-  </section>
+  <main class="pt-16">
 
-  <!-- SOBRE -->
-  <section class="section">
-
-    <div class="grid">
-
-      <div>
-
-        <!-- IMAGEM -->
-        <img 
-          src="./IMG_9979.jpg"
-          alt="Blusa Kero Deus"
-          class="img"
-        >
-
-      </div>
-
-      <div>
-
-        <h2 class="title">
-          Muito mais que uma blusa
-        </h2>
-
-        <p style="font-size:20px; line-height:1.7; color:#555;">
-          A camisa oficial do Kero Deus representa fé, união e alegria.
-          Ideal para viver intensamente todos os momentos do acampamento.
+    <!-- HERO SECTION -->
+    <section class="relative h-[80vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('IMG_0142.jpg');">
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <div class="relative z-20 text-center text-white px-4">
+        <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter">KERO DEUS</h1>
+        <p class="text-lg md:text-xl font-light mb-8 max-w-xl mx-auto text-gray-200 uppercase tracking-widest italic">
+          Salva vidas, transforma corações
         </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#comprar" class="px-8 py-4 bg-[#c89b3c] hover:bg-[#ddb04e] text-white font-bold rounded-full transition-all transform hover:scale-105 text-center shadow-lg">Comprar Blusa</a>
+          <a href="#inscricao" class="px-8 py-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold rounded-full transition-all transform hover:scale-105 text-center shadow-lg">Fazer Inscrição</a>
+        </div>
+      </div>
+    </section>
 
-        <ul style="margin-top:25px; font-size:18px; line-height:2;">
-          <li>✅ Modelo Oversize</li>
-          <li>✅ Tecido confortável</li>
-          <li>✅ Estampa exclusiva</li>
-          <li>✅ Ideal para o acampamento</li>
-        </ul>
+    <!-- SOBRE - APENAS IMAGENS (SEM TEXTO SOBRE ELAS) -->
+    <section id="sobre" class="max-w-6xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <!-- Lado das Fotos (Limpo, sem legendas) -->
+        <div class="flex flex-col gap-8">
+          <div class="relative group">
+             <div class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
+                <img src="IMG_9845.jpg" alt="Blusa Oficial 1" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110">
+             </div>
+          </div>
 
+          <div class="relative group md:ml-12">
+             <div class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
+                <img src="IMG_9938.jpg" alt="Blusa Oficial 2" class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110">
+             </div>
+          </div>
+        </div>
+        
+        <!-- Lado do Texto -->
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight uppercase tracking-tight">Muito mais que uma blusa</h2>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed font-light">
+            A nossa camisa oficial foi desenhada para unir conforto e identidade. Feita com material de alta qualidade, ela é ideal para todos os momentos do acampamento.
+          </p>
+          
+          <ul class="space-y-4 font-semibold text-gray-700 max-w-md mx-auto md:mx-0 text-left">
+            <li class="flex items-center gap-3">
+              ✅ <span>Corte unissex (fica bem em todos)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              ✅ <span>Tecido premium que não esquenta</span>
+            </li>
+            <li class="flex items-center gap-3">
+              ✅ <span>Estampa de alta durabilidade</span>
+            </li>
+            <li class="flex items-center gap-3">
+              ✅ <span>Tamanhos disponíveis: do PP ao XGG</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA - VIVA A EXPERIÊNCIA (16 FOTOS) -->
+    <section id="experiencia" class="bg-[#2f1d14] text-white py-20 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 uppercase tracking-tight text-[#c89b3c]">Viva a Experiência</h2>
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light">
+          O Kero Deus é um acampamento que <strong>salva vidas</strong>, <strong>transforma corações</strong> e <strong>aproxima jovens de Deus</strong> através da fé, da alegria e da comunhão.
+        </p>
       </div>
 
-    </div>
-
-  </section>
-
-  <!-- GALERIA -->
-  <section class="gallery">
-
-    <div style="text-align:center; margin-bottom:50px;">
-
-      <h2 class="title">
-        Viva essa experiência
-      </h2>
-
-      <p style="color:#ddd;">
-        O Kero Deus é mais do que um evento.
-      </p>
-
-    </div>
-
-    <div class="gallery-grid">
-
-      <!-- IMAGEM -->
-      <img 
-        src="./IMG_9938.jpg"
-        alt="Kero Deus"
-        class="img"
-      >
-
-      <!-- IMAGEM -->
-      <img 
-        src="./IMG_9845.jpg"
-        alt="Kero Deus"
-        class="img"
-      >
-
-    </div>
-
-  </section>
-
-  <!-- COMPRA -->
-  <section class="section" id="comprar">
-
-    <div class="card">
-
-      <h2 class="title">
-        Blusa Oficial Kero Deus
-      </h2>
-
-      <p style="color:#777; font-size:18px;">
-        Edição especial do acampamento
-      </p>
-
-      <div class="price">
-        R$ 59,90
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="overflow-hidden rounded-[2rem] shadow-2xl border-2 border-[#c89b3c]/20">
+          <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+            <img src="foto1.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto2.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto3.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto4.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto5.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto6.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto7.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto8.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto9.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto10.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto11.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto12.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto13.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto14.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto15.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+            <img src="foto16.png" class="min-w-full h-[350px] md:h-[550px] object-cover">
+          </div>
+        </div>
       </div>
+    </section>
 
-      <p style="font-size:20px;">
-        Tamanhos disponíveis:
-      </p>
-
-      <p style="margin-top:10px; font-size:22px; font-weight:bold;">
-        P • M • G • GG
-      </p>
-
-      <!-- BOTÕES WHATSAPP -->
-      <div class="wpp-buttons">
-
-        <!-- WHATSAPP 1 -->
-        <a 
-          href="https://wa.me/5599999999999?text=Olá,%20tenho%20interesse%20na%20blusa%20do%20Kero%20Deus"
-          target="_blank"
-          class="btn btn-green"
-        >
-          Comprar com João
-        </a>
-
-        <!-- WHATSAPP 2 -->
-        <a 
-          href="https://wa.me/5588888888888?text=Olá,%20tenho%20interesse%20na%20blusa%20do%20Kero%20Deus"
-          target="_blank"
-          class="btn btn-green"
-        >
-          Comprar com Maria
-        </a>
-
+    <!-- VENDAS -->
+    <section id="comprar" class="py-20 px-6 bg-white">
+      <div class="max-w-4xl mx-auto rounded-[2.5rem] p-10 md:p-16 text-center border border-gray-100 shadow-sm">
+        <h2 class="text-4xl font-black mb-4 uppercase text-[#2f1d14]">Blusa Oficial</h2>
+        <div class="text-6xl font-black text-[#c89b3c] mb-8">R$ 60,00</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5iCT3s_N8qhznz9G5BU_J1J7HlXptt-NPEWr5IGRZWTF2DA/viewform" target="_blank" class="bg-[#25D366] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#1ebe5d] transition-all inline-block shadow-lg">Comprar via Formulário</a>
       </div>
+    </section>
 
-    </div>
+    <!-- INSCRIÇÕES -->
+    <section id="inscricao" class="pb-24 px-6 bg-white">
+      <div class="max-w-4xl mx-auto bg-gradient-to-r from-[#2f1d14] to-[#4b3621] rounded-[2.5rem] p-10 md:p-20 text-center text-white shadow-2xl">
+        <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter">Inscrições Abertas</h2>
+        <p class="mb-10 text-gray-300 text-lg">Garanta agora sua participação no próximo Acampamento Kero Deus.</p>
+        <a href="https://forms.gle/SEU-LINK-AQUI" target="_blank" class="bg-[#c89b3c] text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-[#ddb04e] transition-all inline-block shadow-lg">Fazer Inscrição</a>
+      </div>
+    </section>
 
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer>
-
-    <h2 style="font-size:35px; margin-bottom:10px;">
-      KERO DEUS
-    </h2>
-
-    <p style="font-size:18px;">
-      Fé • Juventude • Experiência
-    </p>
-
+  <footer class="bg-[#1a100a] text-white py-12 text-center">
+    <h2 class="text-2xl font-black text-[#c89b3c] mb-2 uppercase tracking-widest">KERO DEUS</h2>
+    <p class="text-gray-500 text-sm italic">"Salva vidas, transforma corações"</p>
   </footer>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const totalImages = carousel.querySelectorAll('img').length;
+    let currentIndex = 0;
+
+    function autoPlay() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    setInterval(autoPlay, 4000);
+  </script>
 
 </body>
 </html>
