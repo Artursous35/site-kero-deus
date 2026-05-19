@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,7 +111,8 @@
 
           <div class="relative group">
 
-            <div class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
+            <div
+              class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
 
               <img src="IMG_9845.jpg"
                 alt="Camisa Oficial 1"
@@ -121,7 +123,8 @@
 
           <div class="relative group md:ml-12">
 
-            <div class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
+            <div
+              class="bg-white p-2 rounded-2xl shadow-md border border-gray-100 overflow-hidden h-[220px] md:h-[300px] flex items-center justify-center">
 
               <img src="IMG_9938.jpg"
                 alt="Camisa Oficial 2"
@@ -186,7 +189,23 @@
       </div>
 
       <!-- CARROSSEL -->
-      <div class="max-w-4xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto px-4 relative">
+
+        <!-- BOTÃO ESQUERDA -->
+        <button id="prevBtn"
+          class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full text-2xl">
+
+          ❮
+
+        </button>
+
+        <!-- BOTÃO DIREITA -->
+        <button id="nextBtn"
+          class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full text-2xl">
+
+          ❯
+
+        </button>
 
         <div class="overflow-hidden rounded-[2rem] shadow-2xl border-2 border-[#c89b3c]/20">
 
@@ -217,7 +236,8 @@
     <!-- CAMISA -->
     <section id="comprar" class="py-20 px-6 bg-white">
 
-      <div class="max-w-4xl mx-auto rounded-[2.5rem] p-10 md:p-16 text-center border border-gray-100 shadow-sm">
+      <div
+        class="max-w-4xl mx-auto rounded-[2.5rem] p-10 md:p-16 text-center border border-gray-100 shadow-sm">
 
         <h2 class="text-4xl font-black mb-4 uppercase text-[#2f1d14]">
           Camisa Oficial
@@ -240,7 +260,8 @@
     <!-- INSCRIÇÕES -->
     <section id="inscricao" class="pb-24 px-6 bg-white">
 
-      <div class="max-w-4xl mx-auto bg-gradient-to-r from-[#2f1d14] to-[#4b3621] rounded-[2.5rem] p-10 md:p-20 text-center text-white shadow-2xl">
+      <div
+        class="max-w-4xl mx-auto bg-gradient-to-r from-[#2f1d14] to-[#4b3621] rounded-[2.5rem] p-10 md:p-20 text-center text-white shadow-2xl">
 
         <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter">
           Inscrições Abertas
@@ -257,7 +278,7 @@
             target="_blank"
             class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
 
-            Falar com Marcos Paulo 
+            Falar com Marcos Paulo
 
           </a>
 
@@ -308,18 +329,43 @@
   <script>
 
     const carousel = document.getElementById('carousel');
-    const totalImages = carousel.querySelectorAll('img').length;
+    const images = carousel.querySelectorAll('img');
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
     let currentIndex = 0;
+    const totalImages = images.length;
 
-    function autoPlay() {
-      currentIndex = (currentIndex + 1) % totalImages;
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // ATUALIZA O CARROSSEL
+    function updateCarousel() {
+      carousel.style.transform =
+        `translateX(-${currentIndex * 100}%)`;
     }
 
-    setInterval(autoPlay, 5000);
+    // PRÓXIMA IMAGEM
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    }
+
+    // IMAGEM ANTERIOR
+    function prevSlide() {
+      currentIndex =
+        (currentIndex - 1 + totalImages) % totalImages;
+
+      updateCarousel();
+    }
+
+    // EVENTOS DOS BOTÕES
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // AUTO PLAY
+    setInterval(nextSlide, 5000);
 
   </script>
 
 </body>
+
 </html>
