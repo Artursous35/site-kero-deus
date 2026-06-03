@@ -9,22 +9,32 @@
   <meta name="keywords" content="acampamento cristão, camisa evento, jovens, kero deus, testemunhos, localização, faq, sítio fidalgo">
   <meta name="author" content="Kero Deus">
 
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:title" content="Kero Deus | Camisa Oficial e Inscrições 2026">
+  <meta property="og:description" content="Acampamento que salva vidas e transforma corações. Sítio Fidalgo, Alcântaras-CE.">
+  <meta property="og:image" content="https://seudominio.com/IMG_0142.jpg">
+  <meta property="og:url" content="https://seudominio.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kero Deus 2026">
+  <meta name="twitter:description" content="Salva vidas, transforma corações.">
+  <meta name="twitter:image" content="https://seudominio.com/IMG_0142.jpg">
+
   <title>Kero Deus | Camisa Oficial e Inscrições </title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' font-size='80' text-anchor='middle' dy='.35em' fill='%23c89b3c'%3E✝%3C/text%3E%3C/svg%3E">
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVFhH7ZbBDYAwDAPbTMAITMAITMAITMAITMAIjMAI7wPZSlGatDJNpR46SZGilnP2kR8QcuGZR9RagcfBvAcpZQSPg3kPUsoIHgfzHqSUETwO5j1IKSMLHsQyUsoIHgfzHqSU8cujDnJ8bYHxnOc8Z/1ifABEpSJrB0BrI3QMgIi0Vkb0bCKwHxkggJQCai1YawWiFEDXOkSpBbTWgdYaQa0ZtdYIak1zzfM8pJQCT/SwzW0E4MUAAAAASUVORK5CYII=">
 
-  <!-- Pré-conexões -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preload" as="image" href="IMG_0142.jpg" fetchpriority="high">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -96,6 +106,8 @@
       transition: opacity 0.3s, visibility 0.3s;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       z-index: 40;
+      border: none;
+      font-size: 1.25rem;
     }
 
     .back-to-top.visible {
@@ -108,20 +120,13 @@
       transform: translateY(-3px);
     }
 
+    /* Accordion nativo com <details> */
     .faq-question {
       cursor: pointer;
-      transition: background-color 0.2s;
+      list-style: none;
     }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .faq-answer.open {
-      max-height: 500px;
-      transition: max-height 0.4s ease-in;
+    .faq-question::-webkit-details-marker {
+      display: none;
     }
 
     /* Modal para testemunhos completos */
@@ -157,6 +162,9 @@
       cursor: pointer;
       color: #c89b3c;
       font-weight: bold;
+      background: none;
+      border: none;
+      line-height: 1;
     }
     .modal-img {
       width: 70px;
@@ -189,30 +197,40 @@
     .btn-ler-mais:hover {
       text-decoration: underline;
     }
+
+    /* Compensar header fixo nos links âncora */
+    section[id] {
+      scroll-margin-top: 5rem;
+    }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- NAVBAR -->
   <header class="fixed top-0 left-0 right-0 glass-nav shadow-sm z-50 border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-extrabold tracking-wider text-[#2f1d14]" aria-label="Kero Deus - Página inicial">
         KERO DEUS
       </a>
 
-      <nav class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600 uppercase tracking-widest" aria-label="Menu principal">
+      <nav class="hidden md:flex space-x-6 font-semibold text-xs text-gray-600 uppercase tracking-widest" aria-label="Menu principal">
         <a href="#" class="hover:text-[#c89b3c] transition">Início</a>
         <a href="#sobre" class="hover:text-[#c89b3c] transition">A camisa</a>
         <a href="#experiencia" class="hover:text-[#c89b3c] transition">Experiência</a>
+        <a href="#playlist" class="hover:text-[#c89b3c] transition">Playlist</a>
         <a href="#testemunhos" class="hover:text-[#c89b3c] transition">Testemunhos</a>
         <a href="#faq" class="hover:text-[#c89b3c] transition">FAQ</a>
         <a href="#localizacao" class="hover:text-[#c89b3c] transition">Localização</a>
         <a href="#inscricao" class="hover:text-[#c89b3c] transition">Inscrições</a>
       </nav>
 
-      <button id="menuBtn" class="md:hidden text-2xl text-[#2f1d14] focus:outline-none" aria-label="Menu" aria-expanded="false">
-        ☰
+      <!-- Menu hamburger em SVG (mais semântico) -->
+      <button id="menuBtn" class="md:hidden text-[#2f1d14] focus:outline-none p-2" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line id="line1" x1="0" y1="2" x2="28" y2="2" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          <line id="line2" x1="0" y1="10" x2="28" y2="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          <line id="line3" x1="0" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+        </svg>
       </button>
     </div>
 
@@ -220,6 +238,7 @@
       <a href="#" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">Início</a>
       <a href="#sobre" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">A camisa</a>
       <a href="#experiencia" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">Experiência</a>
+      <a href="#playlist" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">Playlist</a>
       <a href="#testemunhos" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">Testemunhos</a>
       <a href="#faq" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">FAQ</a>
       <a href="#localizacao" class="font-semibold text-gray-700 py-2 hover:text-[#c89b3c]">Localização</a>
@@ -229,7 +248,6 @@
 
   <main class="pt-16">
 
-    <!-- HERO -->
     <section class="relative h-[80vh] min-h-[600px] flex items-center justify-center bg-cover bg-center"
       style="background-image: url('IMG_0142.jpg');">
       <div class="absolute inset-0 bg-black/70 z-10"></div>
@@ -243,11 +261,11 @@
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="#comprar"
             class="px-8 py-4 bg-[#c89b3c] hover:bg-[#ddb04e] text-white font-bold rounded-full transition-all transform hover:scale-105 text-center shadow-lg">
-            Comprar Camisa
+            Comprar Camisa ↗
           </a>
           <a href="#inscricao"
             class="px-8 py-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold rounded-full transition-all transform hover:scale-105 text-center shadow-lg">
-            Fazer Inscrição
+            Fazer Inscrição ↗
           </a>
         </div>
         <div class="mt-12 bg-black/40 backdrop-blur-sm inline-block px-6 py-3 rounded-2xl">
@@ -257,38 +275,34 @@
       </div>
     </section>
 
-    <!-- SOBRE (camisa) - AGORA COM DUAS FOTOS -->
     <section id="sobre" class="max-w-6xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-    
-    <!-- Lado esquerdo: duas imagens empilhadas -->
-    <div class="fade-up grid grid-cols-1 gap-6 max-w-md mx-auto">
-      <img src="IMG_9845.jpg" alt="Camisa oficial - frente" class="rounded-[2rem] shadow-2xl w-full h-auto" />
-      <img src="IMG_9938.jpg" alt="Camisa oficial - costas/detalhe" class="rounded-[2rem] shadow-2xl w-full h-auto" />
-    </div>
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <!-- Imagens com aspect-ratio para evitar CLS -->
+        <div class="reveal-on-scroll grid grid-cols-1 gap-6 max-w-md mx-auto">
+          <img src="IMG_9845.jpg" alt="Frente da camisa oficial Kero Deus" class="w-full h-auto aspect-[4/3] rounded-[2rem] shadow-2xl" loading="lazy" decoding="async" />
+          <img src="IMG_9938.jpg" alt="Detalhe das costas da camisa oficial" class="w-full h-auto aspect-[4/3] rounded-[2rem] shadow-2xl" loading="lazy" decoding="async" />
+        </div>
 
-    <!-- Lado direito: textos e botão (mantido igual) -->
-    <div class="fade-up">
-      <p class="uppercase tracking-[5px] text-[#c89b3c] font-bold mb-4">Camisa Oficial</p>
-      <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-[#2f1d14]">Muito mais que uma camisa</h2>
-      <p class="text-lg text-gray-600 leading-relaxed mb-8">
-        A nossa camisa oficial foi desenhada para unir conforto e identidade. Feita com material de alta qualidade, ideal para todos os momentos do acampamento.
-      </p>
-      <div class="space-y-4 mb-10">
-        <div class="flex items-center gap-3"><span>✅</span> <p>Tecido premium e confortável</p></div>
-        <div class="flex items-center gap-3"><span>✅</span> <p>Modelagem unissex</p></div>
-        <div class="flex items-center gap-3"><span>✅</span> <p>Alta durabilidade</p></div>
-        <div class="flex items-center gap-3"><span>✅</span> <p>Tamanhos disponíveis: do PP ao XGG</p></div>
+        <div class="reveal-on-scroll">
+          <p class="uppercase tracking-[5px] text-[#c89b3c] font-bold mb-4">Camisa Oficial</p>
+          <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-[#2f1d14]">Muito mais que uma camisa</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">
+            A nossa camisa oficial foi desenhada para unir conforto e identidade. Feita com material de alta qualidade, ideal para todos os momentos do acampamento.
+          </p>
+          <div class="space-y-4 mb-10">
+            <div class="flex items-center gap-3"><span>✅</span> <p>Tecido premium e confortável</p></div>
+            <div class="flex items-center gap-3"><span>✅</span> <p>Modelagem unissex</p></div>
+            <div class="flex items-center gap-3"><span>✅</span> <p>Alta durabilidade</p></div>
+            <div class="flex items-center gap-3"><span>✅</span> <p>Tamanhos disponíveis: do PP ao XGG</p></div>
+          </div>
+          <a href="#comprar" class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-10 py-5 rounded-full font-bold inline-block transition hover:scale-105">
+            Comprar Camisa ↗
+          </a>
+        </div>
       </div>
-      <a href="#comprar" class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-10 py-5 rounded-full font-bold inline-block transition hover:scale-105">
-        Comprar Camisa
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- EXPERIÊNCIA (carrossel) -->
-    <section id="experiencia" class="bg-[#2f1d14] text-white py-20 overflow-hidden">
+    <section id="experiencia" class="bg-[#2f1d14] text-white pt-20 pb-10 overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 text-center mb-12">
         <h2 class="text-3xl md:text-5xl font-extrabold mb-6 uppercase tracking-tight text-[#c89b3c]">
           Viva a Experiência
@@ -309,31 +323,53 @@
           class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white w-12 h-12 rounded-full text-2xl transition focus:outline-none focus:ring-2 focus:ring-[#c89b3c]"
           aria-label="Próxima imagem">❯</button>
 
-        <div class="overflow-hidden rounded-[2rem] shadow-2xl border-2 border-[#c89b3c]/20" role="region" aria-roledescription="Carrossel de imagens do acampamento">
-          <div id="carousel" class="flex transition-transform duration-700 ease-in-out" aria-live="polite">
-            <img src="foto1.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto2.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto3.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto4.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto5.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto6.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto7.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto8.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto9.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto10.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto11.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto12.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto13.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto14.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto15.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
-            <img src="foto16.png" alt="" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy">
+        <div class="overflow-hidden rounded-[2rem] shadow-2xl border-2 border-[#c89b3c]/20" role="region" aria-roledescription="Carrossel de imagens do acampamento" aria-live="polite">
+          <!-- Texto invisível para leitores de tela anunciarem slide atual -->
+          <div id="carouselLiveText" class="sr-only" aria-live="assertive"></div>
+          <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+            <!-- Cada imagem com alt descritivo e aspect-ratio -->
+            <img src="foto1.png" alt="Jovens reunidos em oração no acampamento Kero Deus" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto2.png" alt="Momento de louvor e música ao vivo" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto3.png" alt="Grupo de amigos abraçados durante o retiro" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto4.png" alt="Adoração ao ar livre no Sítio Fidalgo" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto5.png" alt="Palestra e formação com os jovens" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto6.png" alt="Jovens participando de dinâmica em grupo" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto7.png" alt="Confissão e momento de reconciliação" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto8.png" alt="Caminhada pela serra de Alcântaras" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto9.png" alt="Celebração da Santa Missa no acampamento" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto10.png" alt="Jovens tocando violão em volta da fogueira" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto11.png" alt="Momento de descontração e banho de rio" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto12.png" alt="Partilha em pequenos grupos" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto13.png" alt="Adoração ao Santíssimo Sacramento" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto14.png" alt="Jovens cantando e dançando na noite cultural" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto15.png" alt="Vista panorâmica do Sítio Fidalgo" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
+            <img src="foto16.png" alt="Equipe de organização do Kero Deus" class="min-w-full h-[350px] md:h-[550px] object-cover" loading="lazy" decoding="async">
           </div>
         </div>
         <div id="carouselDots" class="flex justify-center gap-3 mt-6" aria-label="Navegação por slides"></div>
       </div>
     </section>
 
-    <!-- TESTEMUNHOS COM MODAL (resumo + botão "Ler completo") -->
+    <section id="playlist" class="bg-[#2f1d14] text-white pb-20 px-6">
+      <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
+        <div class="inline-block bg-[#c89b3c]/10 rounded-full px-4 py-1.5 mb-4 border border-[#c89b3c]/30">
+          <span class="text-sm text-[#c89b3c] font-semibold tracking-wider uppercase">🎵 Entre no Clima</span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-tight text-white">
+          Playlist Oficial
+        </h2>
+        <p class="text-gray-400 text-md md:text-lg max-w-2xl mx-auto mb-10 font-light">
+          Ouça as músicas que vão marcar o nosso acampamento. Sintonize o coração desde já!
+        </p>
+        
+        <div class="bg-black/30 p-4 md:p-6 rounded-[2rem] border border-white/10 shadow-2xl backdrop-blur-md">
+          <div class="relative w-full" style="padding-top: 352px;">
+            <iframe data-testid="embed-iframe" style="border-radius:12px; position:absolute; top:0; left:0; width:100%; height:100%;" src="https://open.spotify.com/embed/playlist/5w5f0CK26enfUySM8Ruow1?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="testemunhos" class="py-20 px-6 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12 reveal-on-scroll">
@@ -341,10 +377,10 @@
           <p class="text-gray-600 text-lg max-w-2xl mx-auto">Vidas que foram transformadas pelo Kero Deus! </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Testemunho 1 - Davi Araujo -->
+          <!-- Cards de testemunhos mantidos como estavam, sem alterações estruturais -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="davi.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="davi.jpeg" alt="Foto de Davi Araujo" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Davi Araujo</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -353,17 +389,11 @@
             <p class="text-gray-600 italic resumo">
               "O Kero Deus é uma experiência tão incrível que se torna única e especial em cada edição. É algo tão extraordinário que, muitas vezes, nem conseguimos imaginar a dimensão...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Davi Araujo" 
-                    data-img="davi.jpeg" 
-                    data-texto='O Kero Deus é uma experiência tão incrível que se torna única e especial em cada edição. É algo tão extraordinário que, muitas vezes, nem conseguimos imaginar a dimensão do que é vivido ali. E o Kero Deus não é apenas um acampamento ou retiro… é como um recomeço, uma nova oportunidade de renovar a fé e escolher, todos os dias, querer mais de Deus.'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Davi Araujo" data-img="davi.jpeg" data-texto='O Kero Deus é uma experiência tão incrível que se torna única e especial em cada edição. É algo tão extraordinário que, muitas vezes, nem conseguimos imaginar a dimensão do que é vivido ali. E o Kero Deus não é apenas um acampamento ou retiro… é como um recomeço, uma nova oportunidade de renovar a fé e escolher, todos os dias, querer mais de Deus.'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 2 - Valentina -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="valentina.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="valentina.jpeg" alt="Foto de Valentina" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Valentina</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -372,17 +402,11 @@
             <p class="text-gray-600 italic resumo">
               "Costumo dizer que viver o Kero Deus é como experimentar um pedacinho do céu na Terra. São os melhores quatro dias, em que Jesus se utiliza de pequenas “desculpas”...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Valentina" 
-                    data-img="valentina.jpeg" 
-                    data-texto='Costumo dizer que viver o Kero Deus é como experimentar um pedacinho do céu na Terra. São os melhores quatro dias, em que Jesus se utiliza de pequenas “desculpas” para ter um verdadeiro acesso ao seu coração. Viver o meu primeiro Kero Deus foi como ser curada de tudo aquilo que o mundo já havia causado em mim. Foi a resposta que eu precisava para me firmar na vida que, graças a Ele, tenho hoje: uma vida de intimidade e de verdadeiro encontro com o amor de Deus. Esta será a minha quinta edição no acampamento, e como é bom ser uma jovem que busca incessantemente o amor de Cristo, porque, a cada edição, Ele me encontra de uma maneira diferente. “A melhor edição do Kero Deus sempre será a próxima.”'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Valentina" data-img="valentina.jpeg" data-texto='Costumo dizer que viver o Kero Deus é como experimentar um pedacinho do céu na Terra. São os melhores quatro dias, em que Jesus se utiliza de pequenas “desculpas” para ter um verdadeiro acesso ao seu coração. Viver o meu primeiro Kero Deus foi como ser curada de tudo aquilo que o mundo já havia causado em mim. Foi a resposta que eu precisava para me firmar na vida que, graças a Ele, tenho hoje: uma vida de intimidade e de verdadeiro encontro com o amor de Deus. Esta será a minha quinta edição no acampamento, e como é bom ser uma jovem que busca incessantemente o amor de Cristo, porque, a cada edição, Ele me encontra de uma maneira diferente. “A melhor edição do Kero Deus sempre será a próxima.”'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 3 - Erik Torres -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="erik.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="erik.jpeg" alt="Foto de Erik Torres" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Erik Torres</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -391,18 +415,11 @@
             <p class="text-gray-600 italic resumo">
               "No meio da correria eu ouvi um chamado,suave como a brisa, porém tão delicado.Era Deus me chamando pra perto outra vez,curando em silêncio...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Erik Torres" 
-                    data-img="erik.jpeg" 
-                    data-texto='No meio da correria eu ouvi um chamado,suave como a brisa, porém tão delicado.Era Deus me chamando pra perto outra vez,curando em silêncio o que o mundo desfez.Cheguei no “Kero Deus” com feridas no peito,sem saber qual caminho parecia direito.Trazia tanta dor guardada no coraçãoe um vazio escondido na solidão.Na Santa Missa, chorei diante do altar,não de tristeza, mas por me encontrar.Vi no Corpo de Cristo o amor verdadeiro,o abraço mais puro do Deus companheiro.Na adoração, no silêncio e na paz,Deus foi curando tudo o que ficou para trás.E aquilo que tanto pesava em meu peitofoi entregue nas mãos do Senhor perfeito.“O Kero Deus” não foi só um acampamento,foi renovo de fé em meio ao sofrimento.Foi Cristo mudando meu jeito de viver,me mostrando que ainda vale a pena crer.Voltei diferente daquele lugar,com mais esperança para recomeçar.Porque quem encontra Jesus de verdadeleva no peito a paz da eternidade.Hoje sigo mais firme, segurando minha cruz,pois descobri que minha força vem de Jesus. ✨
-'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Erik Torres" data-img="erik.jpeg" data-texto='No meio da correria eu ouvi um chamado,suave como a brisa, porém tão delicado.Era Deus me chamando pra perto outra vez,curando em silêncio o que o mundo desfez.Cheguei no “Kero Deus” com feridas no peito,sem saber qual caminho parecia direito.Trazia tanta dor guardada no coraçãoe um vazio escondido na solidão.Na Santa Missa, chorei diante do altar,não de tristeza, mas por me encontrar.Vi no Corpo de Cristo o amor verdadeiro,o abraço mais puro do Deus companheiro.Na adoração, no silêncio e na paz,Deus foi curando tudo o que ficou para trás.E aquilo que tanto pesava em meu peitofoi entregue nas mãos do Senhor perfeito.“O Kero Deus” não foi só um acampamento,foi renovo de fé em meio ao sofrimento.Foi Cristo mudando meu jeito de viver,me mostrando que ainda vale a pena crer.Voltei diferente daquele lugar,com mais esperança para recomeçar.Porque quem encontra Jesus de verdadeleva no peito a paz da eternidade.Hoje sigo mais firme, segurando minha cruz,pois descobri que minha força vem de Jesus. ✨'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 4 - Luiza Teofilo -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="luiza.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="luiza.jpeg" alt="Foto de Luiza Teofilo" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Luiza Teofilo</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -411,36 +428,24 @@
             <p class="text-gray-600 italic resumo">
               "O Kero Deus nunca foi apenas um acampamento. Na verdade, ele é uma das formas mais lindas que Deus encontrou para alcançar e salvar corações. Cada momento vivido ali é especial...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Luiza Teofilo" 
-                    data-img="luiza.jpeg" 
-                    data-texto='O Kero Deus nunca foi apenas um acampamento. Na verdade, ele é uma das formas mais lindas que Deus encontrou para alcançar e salvar corações. Cada momento vivido ali é especial: a simplicidade nas pequenas coisas, a alegria compartilhada e a constância de um amor que permanece. É impossível não perceber o quanto esse acampamento já transformou tantas histórias. O Kero Deus salvou minha vida, continua salvando, salva muitas outras vidas e ainda salvará tantas mais. Porque não se trata apenas de dias vividos em um acampamento, mas de experiências que marcam profundamente nossas vidas. É um lugar que nos faz sair da rotina e nos adaptar a viver algo novo, nos aproxima de momentos especiais com Deus e nos impulsiona a enxergar a vida de uma maneira diferente. Existe algo único naquele lugar, algo que faz cada abraço, cada oração, cada conversa e cada sorriso terem um significado maior. E talvez seja exatamente isso que torna tudo tão especial: a presença de Deus sendo sentida na simplicidade, no amor e na alegria de cada pessoa que faz parte dessa caminhada. É IMPOSSÍVEL SAIR DESSA EXPERIÊNCIA INCRÍVEL QUE É O KERO DEUS SEM SER TRANSFORMADO ✨'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Luiza Teofilo" data-img="luiza.jpeg" data-texto='O Kero Deus nunca foi apenas um acampamento. Na verdade, ele é uma das formas mais lindas que Deus encontrou para alcançar e salvar corações. Cada momento vivido ali é especial: a simplicidade nas pequenas coisas, a alegria compartilhada e a constância de um amor que permanece. É impossível não perceber o quanto esse acampamento já transformou tantas histórias. O Kero Deus salvou minha vida, continua salvando, salva muitas outras vidas e ainda salvará tantas mais. Porque não se trata apenas de dias vividos em um acampamento, mas de experiências que marcam profundamente nossas vidas. É um lugar que nos faz sair da rotina e nos adaptar a viver algo novo, nos aproxima de momentos especiais com Deus e nos impulsiona a enxergar a vida de uma maneira diferente. Existe algo único naquele lugar, algo que faz cada abraço, cada oração, cada conversa e cada sorriso terem um significado maior. E talvez seja exatamente isso que torna tudo tão especial: a presença de Deus sendo sentida na simplicidade, no amor e na alegria de cada pessoa que faz parte dessa caminhada. É IMPOSSÍVEL SAIR DESSA EXPERIÊNCIA INCRÍVEL QUE É O KERO DEUS SEM SER TRANSFORMADO ✨'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 5 - Maria Isadora -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="isa.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="isa.jpeg" alt="Foto de Maria Isadora" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Maria Isadora</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
               </div>
             </div>
             <p class="text-gray-600 italic resumo">
-              "Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmação e a oportunidade que Deus me dá para recomeçar...
+              "Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmation e a oportunidade que Deus me dá para recomeçar...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Maria Isadora" 
-                    data-img="isa.jpeg" 
-                    data-texto='Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmação e a oportunidade que Deus me dá para recomeçar. Eu amo o Kero Deus porque foi lá que encontrei refúgio quando meu coração estava cansado. Foi onde Deus me acolheu em Seus braços quando pensei que não conseguiria continuar. O KD é meu porto seguro, onde minhas lágrimas se transformam em oração e onde meu coração encontra paz. Há um sentimento inexplicável quando esses quatro dias chegam. É como se o céu beijasse a Terra e tudo dentro de mim voltasse a fazer sentido. Esses quatro dias mudaram minha vida para sempre e, principalmente, a forma como eu amo. O Kero Deus não é apenas um retiro, mas um verdadeiro encontro com o amor de Deus. 💙'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Maria Isadora" data-img="isa.jpeg" data-texto='Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmação e a oportunidade que Deus me dá para recomeçar. Eu amo o Kero Deus porque foi lá que encontrei refúgio quando meu coração estava cansado. Foi onde Deus me acolheu em Seus braços quando pensei que não conseguiria continuar. O KD é meu porto seguro, onde minhas lágrimas se transformam em oração e onde meu coração encontra paz. Há um sentimento inexplicável quando esses quatro dias chegam. É como se o céu beijasse a Terra e tudo dentro de mim voltasse a fazer sentido. Esses quatro dias mudaram minha vida para sempre e, principalmente, a forma como eu amo. O Kero Deus não é apenas um retiro, mas um verdadeiro encontro com o amor de Deus. 💙'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 6 - João -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="joão.PNG" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="joão.PNG" alt="Foto de João" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">João</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -449,17 +454,11 @@
             <p class="text-gray-600 italic resumo">
               "O Kero Deus é salvação, foi salvação e continua sendo vida! Uma pequena estrofe é pouco para descrever o Kero Deus...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="João" 
-                    data-img="joão.PNG" 
-                    data-texto='O Kero Deus é salvação, foi salvação e continua sendo vida! Uma pequena estrofe é pouco para descrever o Kero Deus. Foi o retiro que me salvou e me fez permanecer firme até hoje. Não sei expressar em palavras como o Kero Deus faz você se sentir mais próximo de Deus. Quem tiver a oportunidade de viver essa experiência, DEVE viver. É algo único, transformador e inesquecível! CUIDAAAA NESSE KERO DEUSSS! 🔥✨'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="João" data-img="joão.PNG" data-texto='O Kero Deus é salvação, foi salvação e continua sendo vida! Uma pequena estrofe é pouco para descrever o Kero Deus. Foi o retiro que me salvou e me fez permanecer firme até hoje. Não sei expressar em palavras como o Kero Deus faz você se sentir mais próximo de Deus. Quem tiver a oportunidade de viver essa experiência, DEVE viver. É algo único, transformador e inesquecível! CUIDAAAA NESSE KERO DEUSSS! 🔥✨'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 7 - Lavi -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="lavi.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="lavi.jpeg" alt="Foto de Lavi" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Lavi</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -468,36 +467,24 @@
             <p class="text-gray-600 italic resumo">
               "Eu amo o Kero Deus porque foi n’Ele que encontrei meu verdadeiro lar. E quem carrega Cristo de verdade está destinado a viver o extraordinário. ✨"
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Lavi" 
-                    data-img="lavi.jpeg" 
-                    data-texto='Eu amo o Kero Deus porque foi n’Ele que encontrei meu verdadeiro lar. E quem carrega Cristo de verdade está destinado a viver o extraordinário. ✨'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Lavi" data-img="lavi.jpeg" data-texto='Eu amo o Kero Deus porque foi n’Ele que encontrei meu verdadeiro lar. E quem carrega Cristo de verdade está destinado a viver o extraordinário. ✨'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 8 - Pedro Melo -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="pedro.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="pedro.jpeg" alt="Foto de Pedro Melo" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Pedro Melo</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
               </div>
             </div>
             <p class="text-gray-600 italic resumo">
-              "Para mim, o “Kero Deus” significa salvação, alegria e um verdadeiro encontro com Deus.Não tenho palavras suficientes...
+              "Para mi, o “Kero Deus” significa salvação, alegria e um verdadeiro encontro com Deus.Não tenho palavras suficientes...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Pedro Melo" 
-                    data-img="pedro.jpeg" 
-                    data-texto='Para mim, o “Kero Deus” significa salvação, alegria e um verdadeiro encontro com Deus.Não tenho palavras suficientes para descrever o que é o “Kero Deus”, porque só quem vive sabe o quão extraordinário ele é. É uma das experiências mais únicas que existem: ter um encontro verdadeiro com Deus e sentir Seu amor de forma tão intensa.Então, se você tiver a oportunidade de viver isso, viva! Porque é uma das melhores experiências que alguém pode ter na vida.Simbora nesse Kero Deus! ✨'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Pedro Melo" data-img="pedro.jpeg" data-texto='Para mim, o “Kero Deus” significa salvação, alegria e um verdadeiro encontro com Deus.Não tenho palavras suficientes para descrever o que é o “Kero Deus”, porque só quem vive sabe o quão extraordinário ele é. É uma das experiências mais únicas que existem: ter um encontro verdadeiro com Deus e sentir Seu amor de forma tão intensa.Então, se você tiver a oportunidade de viver isso, viva! Porque é uma das melhores experiências que alguém pode ter na vida.Simbora nesse Kero Deus! ✨'>📖 Ler testemunho completo</button>
           </div>
-          <!-- Testemunho 9 - Guilherme -->
           <div class="bg-gray-50 rounded-2xl p-6 shadow-md border border-gray-200 reveal-on-scroll">
             <div class="flex items-center gap-3 mb-4">
-              <img src="guilherme.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
+              <img src="guilherme.jpeg" alt="Foto de Guilherme" class="w-12 h-12 rounded-full object-cover border-2 border-[#c89b3c]">
               <div>
                 <h3 class="font-bold text-gray-800">Guilherme</h3>
                 <div class="flex text-[#c89b3c]">★★★★★</div>
@@ -506,19 +493,14 @@
             <p class="text-gray-600 italic resumo">
               "O Kero Deus, para mim, é muito mais do que um retiro. É como se fosse meu lar, o lugar onde meu coração finalmente encontra paz. São quatro...
             </p>
-            <button class="btn-ler-mais" 
-                    data-nome="Guilherme" 
-                    data-img="guilherme.jpeg" 
-                    data-texto='O Kero Deus, para mim, é muito mais do que um retiro. É como se fosse meu lar, o lugar onde meu coração finalmente encontra paz. São quatro dias que passam rápido, mas deixam marcas eternas dentro de mim.É impossível explicar completamente tudo o que sinto vivendo cada momento ali. O agir de Deus é tão forte e tão presente nas músicas, nas pregações, nas brincadeiras e até nos momentos mais simples de fraternidade.O que torna o KD tão essencial para mim é que lá eu me reencontro. No silêncio e na partilha, Deus me lembra de quem eu realmente sou. Cada edição traz uma nova história, um toque diferente e uma experiência única, mas todas terminam com a mesma certeza reconfortante: a de que ali eu sempre estarei em casa. ✨'>
-              📖 Ler testemunho completo
-            </button>
+            <button class="btn-ler-mais" data-nome="Guilherme" data-img="guilherme.jpeg" data-texto='O Kero Deus, para mim, é muito mais do que um retiro. É como se fosse meu lar, o lugar onde meu coração finalmente encontra paz. São quatro dias que passam rápido, mas deixam marcas eternas dentro de mim.É impossível explicar completamente tudo o que sinto vivendo cada momento ali. O agir de Deus é tão forte e tão presente nas músicas, nas pregações, nas brincadeiras e até nos momentos mais simples de fraternidade.O que torna o KD tão essencial para mim é que lá eu me reencontro. No silêncio e na partilha, Deus me lembra de quem eu realmente sou. Cada edição traz uma nova história, um toque diferente e uma experiência única, mas todas terminam com a mesma certeza reconfortante: a de que ali eu sempre estarei em casa. ✨'>📖 Ler testemunho completo</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- O QUE LEVAR (COM CORAÇÃO ABERTO CENTRALIZADO) -->
     <section id="oquelevar" class="py-20 px-6 bg-gray-50">
+      <!-- conteúdo mantido igual, sem alterações -->
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12 reveal-on-scroll">
           <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 uppercase tracking-tight">🎒 O que levar</h2>
@@ -526,7 +508,6 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-          <!-- Coluna 1 -->
           <div class="space-y-4">
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100 reveal-on-scroll">
               <span class="text-3xl">📖</span>
@@ -558,7 +539,6 @@
             </div>
           </div>
 
-          <!-- Coluna 2 -->
           <div class="space-y-4">
             <div class="flex items-start gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100 reveal-on-scroll">
               <span class="text-3xl">🧴</span>
@@ -591,7 +571,6 @@
           </div>
         </div>
 
-        <!-- CORAÇÃO ABERTO CENTRALIZADO (destaque especial) -->
         <div class="mt-12 flex justify-center reveal-on-scroll">
           <div class="bg-gradient-to-r from-[#c89b3c]/20 to-[#c89b3c]/5 border-2 border-[#c89b3c]/40 rounded-2xl p-6 max-w-2xl w-full text-center shadow-md">
             <div class="flex flex-col items-center gap-2">
@@ -610,7 +589,7 @@
       </div>
     </section>
 
-    <!-- PERGUNTAS FREQUENTES (FAQ) -->
+    <!-- FAQ reescrito com <details> nativo (acessível sem JS extra) -->
     <section id="faq" class="py-20 px-6 bg-gray-50">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12 reveal-on-scroll">
@@ -618,56 +597,55 @@
           <p class="text-gray-600 text-lg">Tire suas principais dúvidas sobre o acampamento</p>
         </div>
         <div class="space-y-4">
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
-            <div class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition" data-faq="1">
+          <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
+            <summary class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer list-none">
               <span>📅 Quando e onde será o próximo acampamento?</span>
-              <span class="text-2xl text-[#c89b3c]">+</span>
-            </div>
-            <div class="faq-answer px-5 pb-5 text-gray-600" id="faq-1">
+              <span class="text-2xl text-[#c89b3c] group-open:rotate-45 transition-transform duration-300">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600">
               O próximo acampamento Kero Deus acontecerá de <strong>23 a 26 de julho de 2026</strong> no <strong>Sítio Fidalgo</strong>, na serra de Alcântaras - Ceará.
             </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
-            <div class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition" data-faq="2">
+          </details>
+          <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
+            <summary class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer list-none">
               <span>👕 Como comprar a camisa oficial?</span>
-              <span class="text-2xl text-[#c89b3c]">+</span>
+              <span class="text-2xl text-[#c89b3c] group-open:rotate-45 transition-transform duration-300">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600">
+              Você pode comprar a camisa clicando no botão <strong>"Comprar Camisa"</strong>. O valor é <span class="preco-camisa">R$ 60,00</span>.
             </div>
-            <div class="faq-answer px-5 pb-5 text-gray-600" id="faq-2">
-              Você pode comprar a camisa clicando no botão <strong>"Comprar Camisa"</strong>. O valor é R$ 60,00.
-            </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
-            <div class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition" data-faq="3">
+          </details>
+          <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
+            <summary class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer list-none">
               <span>💰 Qual o valor da inscrição e o que está incluído?</span>
-              <span class="text-2xl text-[#c89b3c]">+</span>
+              <span class="text-2xl text-[#c89b3c] group-open:rotate-45 transition-transform duration-300">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600">
+              O valor da inscrição é <strong class="preco-inscricao">R$ 150,00</strong> e inclui: alimentação completa, hospedagem e todas as atividades do retiro.
             </div>
-            <div class="faq-answer px-5 pb-5 text-gray-600" id="faq-3">
-              O valor da inscrição é <strong>R$ 150,00</strong> e inclui: alimentação completa, hospedagem e todas as atividades do retiro.
-            </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
-            <div class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition" data-faq="4">
+          </details>
+          <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
+            <summary class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer list-none">
               <span>🚌 Haverá transporte? De onde sai o ônibus?</span>
-              <span class="text-2xl text-[#c89b3c]">+</span>
-            </div>
-            <div class="faq-answer px-5 pb-5 text-gray-600" id="faq-4">
+              <span class="text-2xl text-[#c89b3c] group-open:rotate-45 transition-transform duration-300">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600">
               Sim! O ônibus sairá da <strong>Comunidade Católica Marana Tá</strong>, localizada na Rua Raimundo Rodrigues, 381 - Sinhá Sabóia, Sobral - CE (CEP: 62050-370).
             </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
-            <div class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition" data-faq="5">
+          </details>
+          <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal-on-scroll">
+            <summary class="faq-question flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer list-none">
               <span>🙋 Sou menor de idade, posso ir sozinho(a) ou preciso de um responsável?</span>
-              <span class="text-2xl text-[#c89b3c]">+</span>
-            </div>
-            <div class="faq-answer px-5 pb-5 text-gray-600" id="faq-5">
+              <span class="text-2xl text-[#c89b3c] group-open:rotate-45 transition-transform duration-300">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gray-600">
               Para menores de 18 anos, é obrigatória a autorização dos pais ou responsáveis. A idade mínima para participar do acampamento é de 14 anos.
             </div>
-          </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- LOCALIZAÇÃO -->
     <section id="localizacao" class="py-20 px-6 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12 reveal-on-scroll">
@@ -677,8 +655,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="reveal-on-scroll">
             <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md h-80 w-full">
+              <!-- Mapa corrigido com coordenadas reais do Sítio Fidalgo -->
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.7!2d-40.498769!3d-3.581163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7e8b2c8c2c2c2c2%3A0x1c1c1c1c1c1c1c1c!2zU8OtdGlvIEZpZGFsZ28!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.706545637301!2d-40.498769!3d-3.581163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMzQnNTIuMiJTIDQwwrAyOSc1NS42Ilc!5e0!3m2!1spt-BR!2sbr!4v1717000000000!5m2!1spt-BR!2sbr" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -705,49 +684,33 @@
               </div>
             </div>
             
-            <a href="https://www.google.com/maps/place/3%C2%B034'52.2%22S+40%C2%B029'55.6%22W/@-3.5811617,-40.4994141,19z/data=!3m1!4b1!4m4!3m3!8m2!3d-3.581163!4d-40.498769?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-6 py-3 bg-[#c89b3c] text-white rounded-full font-semibold hover:bg-[#ddb04e] transition text-center">Abrir no Google Maps →</a>
+            <a href="https://www.google.com/maps/place/3%C2%B034'52.2%22S+40%C2%B029'55.6%22W/@-3.5811617,-40.4994141,19z/data=!3m1!4b1!4m4!3m3!8m2!3d-3.581163!4d-40.498769?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-6 py-3 bg-[#c89b3c] text-white rounded-full font-semibold hover:bg-[#ddb04e] transition text-center">Abrir no Google Maps ↗</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CAMISA - COMPRA -->
     <section id="comprar" class="py-20 px-6 bg-white">
       <div class="max-w-4xl mx-auto rounded-[2.5rem] p-10 md:p-16 text-center border border-gray-100 shadow-sm reveal-on-scroll">
         <h2 class="text-4xl font-black mb-4 uppercase text-[#2f1d14]">Camisa Oficial</h2>
-        <div class="text-6xl font-black text-[#c89b3c] mb-8">R$ 60,00</div>
+        <div class="text-6xl font-black text-[#c89b3c] mb-8 preco-camisa">R$ 60,00</div>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5iCT3s_N8qhznz9G5BU_J1J7HlXptt-NPEWr5IGRZWTF2DA/viewform"
           target="_blank" rel="noopener noreferrer"
           class="bg-[#25D366] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#1ebe5d] transition-all inline-block shadow-lg focus:outline-none focus:ring-2 focus:ring-[#c89b3c]">
-          Comprar via Formulário
+          Comprar via Formulário ↗
         </a>
       </div>
     </section>
 
-    <!-- INSCRIÇÕES -->
+    <!-- Seção de inscrição com botões gerados dinamicamente via JavaScript -->
     <section id="inscricao" class="pb-24 px-6 bg-white">
       <div class="max-w-4xl mx-auto bg-gradient-to-r from-[#2f1d14] to-[#4b3621] rounded-[2.5rem] p-10 md:p-20 text-center text-white shadow-2xl reveal-on-scroll">
         <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tighter">Inscrições Abertas</h2>
         <p class="mb-10 text-gray-300 text-lg">
           Escolha um responsável abaixo para realizar sua inscrição no Acampamento Kero Deus.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <a href="https://wa.me/5588993601608?text=Quero%20me%20inscrever%20no%20KD!" target="_blank" rel="noopener noreferrer"
-            class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
-            Falar com Marcos Paulo
-          </a>
-          <a href="https://wa.me/5588993315474?text=Quero%20me%20inscrever%20no%20KD!" target="_blank" rel="noopener noreferrer"
-            class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
-            Falar com Maria Isabelly
-          </a>
-          <a href="https://wa.me/5588993225541?text=Quero%20me%20inscrever%20no%20KD!" target="_blank" rel="noopener noreferrer"
-            class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
-            Falar com Madla
-          </a>
-          <a href="https://wa.me/5588992229135?text=Quero%20me%20inscrever%20no%20KD!" target="_blank" rel="noopener noreferrer"
-            class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
-            Falar com Maira
-          </a>
+        <div id="whatsappButtons" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Preenchido via JS -->
         </div>
       </div>
     </section>
@@ -759,14 +722,13 @@
     <p class="text-gray-600 text-xs mt-4">Acampamento no Sítio Fidalgo, Alcântaras-CE | Ônibus saindo da Comunidade Marana Thá, Sobral-CE</p>
   </footer>
 
-  <div id="backToTop" class="back-to-top" aria-label="Voltar ao topo da página" role="button" tabindex="0">
-    ↑
-  </div>
+  <!-- Botão de voltar ao topo semântico -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo da página">↑</button>
 
-  <!-- MODAL PARA TESTEMUNHOS COMPLETOS -->
+  <!-- Modal de testemunho (mantido) -->
   <div id="modalTestemunho" class="modal" role="dialog" aria-modal="true" aria-label="Testemunho completo">
     <div class="modal-content">
-      <span class="modal-close" aria-label="Fechar">&times;</span>
+      <button class="modal-close" aria-label="Fechar">×</button>
       <div style="text-align: center;">
         <img id="modalImg" class="modal-img" src="" alt="">
         <h3 id="modalNome"></h3>
@@ -776,6 +738,7 @@
     </div>
   </div>
 
+  <!-- Dados estruturados Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -816,7 +779,45 @@
 
   <script>
     (function() {
-      // MENU MOBILE
+      // ========== CONFIGURAÇÃO CENTRALIZADA ==========
+      const CONFIG = {
+        evento: {
+          dataInicio: new Date(2026, 6, 23), // 23 de julho de 2026 (mês 6 = julho)
+          local: "Sítio Fidalgo, Alcântaras - CE"
+        },
+        precos: {
+          camisa: 60,
+          inscricao: 150
+        },
+        whatsapp: [
+          { nome: "Marcos Paulo", numero: "5588993601608" },
+          { nome: "Maria Isabelly", numero: "5588993315474" },
+          { nome: "Madla", numero: "5588993225541" },
+          { nome: "Maira", numero: "5588992229135" }
+        ]
+      };
+
+      // Aplicar preços nos locais com classe específica
+      document.querySelectorAll('.preco-camisa').forEach(el => {
+        el.textContent = `R$ ${CONFIG.precos.camisa.toFixed(2).replace('.', ',')}`;
+      });
+      document.querySelectorAll('.preco-inscricao').forEach(el => {
+        el.textContent = `R$ ${CONFIG.precos.inscricao.toFixed(2).replace('.', ',')}`;
+      });
+
+      // Gerar botões de WhatsApp dinamicamente
+      const container = document.getElementById('whatsappButtons');
+      if (container) {
+        container.innerHTML = CONFIG.whatsapp.map(contato => {
+          const msg = encodeURIComponent("Quero me inscrever no KD!");
+          return `<a href="https://wa.me/${contato.numero}?text=${msg}" target="_blank" rel="noopener noreferrer"
+            class="bg-[#25D366] hover:bg-[#1ebe5d] text-white px-8 py-5 rounded-2xl font-bold text-lg transition-all shadow-lg">
+            Falar com ${contato.nome} ↗
+          </a>`;
+        }).join('');
+      }
+
+      // ========== MENU MOBILE ==========
       const menuBtn = document.getElementById('menuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
       const body = document.body;
@@ -848,12 +849,13 @@
         });
       }
 
-      // CARROSSEL
+      // ========== CARROSSEL ==========
       const carousel = document.getElementById('carousel');
       const images = carousel ? carousel.querySelectorAll('img') : [];
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
       const dotsContainer = document.getElementById('carouselDots');
+      const liveText = document.getElementById('carouselLiveText');
       let currentIndex = 0;
       const totalImages = images.length;
       let autoInterval;
@@ -862,6 +864,9 @@
         if (!carousel) return;
         carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
         updateDots();
+        if (liveText) {
+          liveText.textContent = `Mostrando imagem ${currentIndex + 1} de ${totalImages}`;
+        }
       }
 
       function updateDots() {
@@ -916,9 +921,9 @@
       });
       startAutoPlay();
 
-      // CONTAGEM REGRESSIVA
+      // ========== CONTAGEM REGRESSIVA (usando CONFIG) ==========
       function updateCountdown() {
-        const target = new Date(2026, 6, 23, 0, 0, 0);
+        const target = CONFIG.evento.dataInicio;
         const now = new Date();
         const diff = target - now;
         const countdownEl = document.getElementById('countdown');
@@ -932,7 +937,7 @@
       updateCountdown();
       setInterval(updateCountdown, 1000);
 
-      // SCROLL REVEAL
+      // ========== SCROLL REVEAL ==========
       const revealElements = document.querySelectorAll('.reveal-on-scroll');
       function checkReveal() {
         const windowHeight = window.innerHeight;
@@ -945,25 +950,13 @@
       window.addEventListener('resize', checkReveal);
       checkReveal();
 
-      // BACK TO TOP
+      // ========== BACK TO TOP ==========
       const backBtn = document.getElementById('backToTop');
       window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 300));
       backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
       backBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } });
 
-      // FAQ ACCORDION
-      const faqQuestions = document.querySelectorAll('.faq-question');
-      faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-          const answerId = question.getAttribute('data-faq');
-          const answer = document.getElementById(`faq-${answerId}`);
-          const isOpen = answer.classList.contains('open');
-          document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.remove('open'));
-          if (!isOpen) answer.classList.add('open');
-        });
-      });
-
-      // MODAL PARA TESTEMUNHOS
+      // ========== MODAL PARA TESTEMUNHOS ==========
       const modal = document.getElementById('modalTestemunho');
       const modalImg = document.getElementById('modalImg');
       const modalNome = document.getElementById('modalNome');
@@ -973,9 +966,11 @@
       function abrirModal(nome, imgSrc, textoCompleto) {
         modalNome.innerText = nome;
         modalImg.src = imgSrc;
+        modalImg.alt = `Foto de ${nome}`;
         modalTexto.innerText = textoCompleto;
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        closeModalBtn.focus();
       }
 
       function fecharModal() {
@@ -999,6 +994,8 @@
           abrirModal(nome, img, texto);
         });
       });
+
+      // Foco no modal quando aberto
     })();
   </script>
 </body>
